@@ -21,6 +21,7 @@
                 $_SESSION["id"]=$db->id;
                 $_SESSION["email"]=$email;
                 $_SESSION["name"]=$name;
+                $_SESSION["role"]=$db->role;
 
                 header("Location: index.php");
                 
@@ -39,6 +40,7 @@
                 $_SESSION["id"]=$db->id;
                 $_SESSION["email"]=$email;
                 $_SESSION["name"]=$name;
+                $_SESSION["srole"]=$db->srole;
                 // echo $_SESSION["email"];
                  header("Location: index.php");
             } else {

@@ -1,19 +1,39 @@
 <?php
 include "server.php";
 
+session_start();
 $userID = $_GET["id"];
+$role=$_SESSION["role"];
+$srole=$_SESSION["srole"];
 
-$db = $conn->prepare("SELECT * FROM user WHERE id = ?");
-$db->bind_param('i', $userID);
-$db->execute();
-$result = $db->get_result();
+if($role=='user'){
+    $db = $conn->prepare("SELECT * FROM user WHERE id = ?");
+    $db->bind_param('i', $userID);
+    $db->execute();
+    $result = $db->get_result();
 
-if ($result->num_rows == 1) {
-    $userData = $result->fetch_assoc(); // Fetch data as an associative array
-} else {
-    echo "Didn't get data";
-    exit; // Exit the script if no data is found
+    if ($result->num_rows == 1) {
+        $userData = $result->fetch_assoc(); 
+    } else {
+        echo "Didn't get data";
+        exit; 
+    }
+
+}else if($srole=='seller'){
+    $db = $conn->prepare("SELECT * FROM seller WHERE id = ?");
+    $db->bind_param('i', $userID);
+    $db->execute();
+    $result = $db->get_result();
+
+    if ($result->num_rows == 1) {
+        $userData = $result->fetch_assoc(); 
+    } else {
+        echo "Didn't get data";
+        exit; 
+    }
 }
+
+
 ?>
 
 <!DOCTYPE html>

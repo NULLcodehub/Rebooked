@@ -116,6 +116,7 @@
                 $_SESSION["name"]=$result["name"];
                 $_SESSION["email"]=$result["email"];
                 $_SESSION["id"]=$result["id"];
+                $_SESSION["role"]=$result["role"];
                 echo $_SESSION["id"];
                 header("Location: index.php");
             }else{
@@ -136,6 +137,7 @@
                 $_SESSION["name"]=$result["sname"];
                 $_SESSION["email"]=$result["semail"];
                 $_SESSION["id"]=$result["id"];
+                $_SESSION["srole"]=$result["srole"];
                 header("Location: index.php");
             }else{
                 echo 'Invalid email and password';
