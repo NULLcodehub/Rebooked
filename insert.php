@@ -18,7 +18,7 @@
             if ($db->execute()) {
 
                 session_start();
-                $_SESSION["email"]=$db->id;
+                $_SESSION["id"]=$db->id;
                 $_SESSION["email"]=$email;
                 $_SESSION["name"]=$name;
 
@@ -36,10 +36,11 @@
 
             if ($db->execute()) {
                 session_start();
-                $_SESSION["email"]=$db->id;
+                $_SESSION["id"]=$db->id;
                 $_SESSION["email"]=$email;
                 $_SESSION["name"]=$name;
-                header("Location: index.php");
+                // echo $_SESSION["email"];
+                 header("Location: index.php");
             } else {
                 echo "Error: " . $db->error;
             }

@@ -65,6 +65,11 @@
     </style>
 </head>
 <body>
+    <section>
+        <div>
+            <h2 class="text-center mt-5">Rebooked</h2>
+        </div>
+    </section>
     <div class="container">
         <div class="login-form">
             <h2 class="text-center">Login</h2>
@@ -111,6 +116,7 @@
                 $_SESSION["name"]=$result["name"];
                 $_SESSION["email"]=$result["email"];
                 $_SESSION["id"]=$result["id"];
+                echo $_SESSION["id"];
                 header("Location: index.php");
             }else{
                 echo 'Invalid email and password';

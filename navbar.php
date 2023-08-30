@@ -32,9 +32,12 @@
                         
                         $email=$_SESSION["email"];
                         $name=$_SESSION["name"];
+                        $id=$_SESSION["id"];
+                        
                         echo "
                         <div class='navbar-nav'>
-                            <a class='nav-link' href=''>$name</a>
+                            <a class='nav-link' href='user_profile.php?id=$id'>$name</a>
+                            <a class='nav-link' href=''>$id</a>
                             <a class='nav-link' href='logout.php'>Logout</a>
                         </div>
                         ";
