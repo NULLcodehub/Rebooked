@@ -126,7 +126,7 @@
             }
 
         }else if($role=="seller"){
-            $db= $conn->prepare("SELECT * FROM seller WHERE semail = ? AND password = ?");
+            $db= $conn->prepare("SELECT * FROM seller WHERE email = ? AND password = ?");
             $db->bind_param("ss", $email, $password);
             $db->execute();
             $result=$db->get_result();
@@ -134,10 +134,10 @@
             if($result->num_rows==1){
                 $result=$result->fetch_assoc();
                 session_start();
-                $_SESSION["name"]=$result["sname"];
-                $_SESSION["email"]=$result["semail"];
+                $_SESSION["name"]=$result["name"];
+                $_SESSION["email"]=$result["email"];
                 $_SESSION["id"]=$result["id"];
-                $_SESSION["srole"]=$result["srole"];
+                $_SESSION["role"]=$result["role"];
                 header("Location: index.php");
             }else{
                 echo 'Invalid email and password';
@@ -145,15 +145,9 @@
                 exit;
             }
 
-
-
         }
 
     }
-
-
-
-
 
 
 ?>

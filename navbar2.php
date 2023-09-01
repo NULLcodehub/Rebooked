@@ -26,34 +26,22 @@
                     <a class="nav-link" href="#">Best sells</a>
                     <a class="nav-link" href="#">Used book</a>
                 </div>
-                <?php 
-                    session_start();
-                    if(isset($_SESSION["email"])){
-                        
-                        $email=$_SESSION["email"];
-                        $name=$_SESSION["name"];
-                        $id=$_SESSION["id"];
-                        
-                        echo "
-                        <div class='navbar-nav'>
-                            <a class='nav-link' href='user_profile.php?id=$id'>$name</a>
-                            <a class='nav-link' href=''>$id</a>
+                    
+                     <div class='navbar-nav'>
+                            
                             <a class='nav-link' href='logout.php'>Logout</a>
-                        </div>
-                        ";
+                    </div>
 
-                    }else{
-                        echo "<div class='navbar-nav'>
-                            <a class='nav-link' href='login.php'>Sign In</a>
-                            <a class='nav-link' href='userreg.php'>Create your Account</a>
-                        </div> ";
-                    }
-                
-                ?>
+                        
+                        
+                       
+                  
                 
             </div>
         </div>
     </nav>
-    
- </body>
-        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
