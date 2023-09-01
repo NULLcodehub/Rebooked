@@ -9,22 +9,43 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         
+    <style>
+       .navtwo{
+        display:flex;
+        justify-content:center;
+        background: #0E8388;
+        
+       }
+       .navtwo a{
+        text-decoration:none;
+        color:white;
+        padding:1%;
+       }
+       .navtwo a:hover{
+        text-decoration:none;
+        color:#0E8388;
+        padding:1%;
+        background: white;
+       }
+
+    </style>
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Rebooked</a>
+            <a class="navbar-brand" href="index.php">Rebooked</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse  nav-list" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Catagories</a>
-                    <a class="nav-link" href="#">Best sells</a>
-                    <a class="nav-link" href="#">Used book</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+
+                    <a class="nav-link" href="allbooks.php">Used book</a>
+                    <a class="nav-link" href="aboutus.php">about us</a>
                 </div>
                 <?php 
                     session_start();
@@ -55,5 +76,15 @@
         </div>
     </nav>
     
+
+
+   <div>
+       <div class="navtwo">
+            <a href="http:poem.php">Poem</a>
+            <a href="http:Personalfinance.php">Personal finance</a>
+            <a href="http:fiction.php">Fiction</a>
+       </div>             
+   </div>
+
  </body>
         

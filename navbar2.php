@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Rebooked</a>
+            <a class="navbar-brand" href="index.php">Rebooked</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,9 +22,8 @@
             <div class="collapse navbar-collapse  nav-list" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Catagories</a>
-                    <a class="nav-link" href="#">Best sells</a>
-                    <a class="nav-link" href="#">Used book</a>
+                    <a class="nav-link" href="allbooks.php">Used book</a>
+                    <a class="nav-link" href="aboutus.php">Used book</a>
                 </div>
                     
                      <div class='navbar-nav'>

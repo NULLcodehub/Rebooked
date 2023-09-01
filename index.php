@@ -65,17 +65,13 @@
 
 
     <section>
-        <?php include "findbook.php" ?>
-    </section>
-
-    <section>
         <?php include "populerBooks.php" ?>
     </section>
 
 
     <section >
         <div class="browse-book">
-            <a href="http://"><h6 class="browse-text">browse all collection &rarr;</h6></a>
+            <a href="http:allbooks.php"><h6 class="browse-text">browse all collection &rarr;</h6></a>
             
         </div>
     </section>

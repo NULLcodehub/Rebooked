@@ -86,6 +86,7 @@
                         <option value="" Disabled selected>Select</option>
                         <option value="user">User/Buyer</option>
                         <option value="seller">Seller</option>
+                        <option value="admin">admin</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
@@ -139,7 +140,30 @@
                 $_SESSION["id"]=$result["id"];
                 $_SESSION["role"]=$result["role"];
                 header("Location: index.php");
-            }else{
+
+            }
+
+        }else if($role=="admin"){
+                $db= $conn->prepare("SELECT * FROM admin WHERE email = ? AND password = ?");
+                $db->bind_param("ss", $email, $password);
+                $db->execute();
+                $result=$db->get_result();
+
+                if($result->num_rows==1){
+                    $result=$result->fetch_assoc();
+                    session_start();
+                    $_SESSION["name"]=$result["name"];
+                    $_SESSION["email"]=$result["email"];
+                    $_SESSION["id"]=$result["id"];
+                    $_SESSION["role"]=$result["role"];
+                    header("Location:admin.php");
+
+
+
+
+            }
+            
+            else{
                 echo 'Invalid email and password';
                 header("Location: login.php");
                 exit;

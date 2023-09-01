@@ -107,6 +107,21 @@ if($role=='user'){
         text-overflow: ellipsis;
         max-width: 150px;
     }
+    .booklist{
+        overflow-y:scroll;
+        height:500px;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: black;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: white;
+    }
 
     
     @media (max-width: 768px) {
@@ -151,7 +166,6 @@ if($role=='user'){
                     if($role=='user'){
                         echo "
                             <a href='javascript:void(0);' class='tab-link' data-tab='myOrder'>MY order</a>
-                            <a href='javascript:void(0);' class='tab-link' data-tab='myList'>MY book list</a>
                         
                         ";
                     }else if($role=="seller"){
