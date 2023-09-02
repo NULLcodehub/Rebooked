@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store</title>
-    <!-- Include Bootstrap CSS -->
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
   .pop-book{
@@ -60,20 +60,20 @@
     <div class="container mt-5 pop-book">
       <div class="row row-cols-md-2">
         <?php
-        // Connect to your MySQL database
+        
         include "server.php";
-        // Initialize filter variables
+       
         $title = '';
         $author = '';
         $genre = '';
 
-        // Check if the form was submitted
+        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $title = $_POST["title"];
             $author = $_POST["author"];
             $genre = $_POST["genre"];
 
-            // Build the SQL query with filters
+            
             $sql = "SELECT title, author, price, book_cover FROM books WHERE 1";
 
             if (!empty($title)) {
